@@ -5,8 +5,6 @@ const movieList = require('./movielist.js')
 const movieString = movieList.movieString
 
 const onMovieInput = function (event) {
-  console.log('onMovieInput has done something')
-  console.log('movieList is ', movieList)
 }
 
 $('#movie-input').keyup(function () {
@@ -25,8 +23,6 @@ $('#movie-input').keyup(function () {
   let results = ''
   let result
   while (result = rx.exec(movieString)) {
-    console.log('result is ', result)
-    console.log('results before the \n stuff is ', results)
     results += '\n' + result
     i += 1
     if (i >= 100) {
@@ -52,6 +48,17 @@ $('#movie-input').keyup(function () {
   resultsCount.val(i)
 })
 
+const onMovieClick = function (event) {
+  const chosenMovie = event.target.innerHTML
+  const movieIndex = movieList.movieList.indexOf(chosenMovie)
+  document.getElementById('movie-input').value = ''
+  $('#search-results').hide()
+  api.getMovieMatches(movieIndex + 1)
+    .then(ui.showGetMovieMatchesSuccess)
+    .catch(ui.showGetMovieMatchesFail)
+}
+
 module.exports = {
-  onMovieInput: onMovieInput
+  onMovieInput: onMovieInput,
+  onMovieClick: onMovieClick
 }
