@@ -3,9 +3,12 @@
 const config = require('./config')
 
 const getMovieMatches = function (selectedMovie) {
+  console.log(selectedMovie)
   return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/movies/' + selectedMovie
+    method: 'POST',
+    dataType: 'json',
+    url: config.apiUrl + '/movies/',
+    data: selectedMovie
   })
 }
 

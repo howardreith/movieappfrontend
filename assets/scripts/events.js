@@ -50,10 +50,11 @@ $('#movie-input').keyup(function () {
 
 const onMovieClick = function (event) {
   const chosenMovie = event.target.innerHTML
-  const movieIndex = movieList.movieList.indexOf(chosenMovie)
-  document.getElementById('movie-input').value = ''
+  console.log(chosenMovie)
+  // const movieIndex = movieList.movieList.indexOf(chosenMovie)
+  // document.getElementById('movie-input').value = ''
   $('#search-results').hide()
-  api.getMovieMatches(movieIndex + 1)
+  api.getMovieMatches(chosenMovie)
     .then(ui.showGetMovieMatchesSuccess)
     .catch(ui.showGetMovieMatchesFail)
 }
