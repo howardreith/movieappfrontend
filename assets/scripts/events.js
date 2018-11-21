@@ -39,7 +39,7 @@ $('#movie-input').keyup(function () {
   // console.log('revised resultsArray is ', resultsArray)
   for (let i = 0; i < resultsArray.length; i++) {
     if (resultsArray[i]) {
-      resultList.innerHTML += `<li class="list-group-item">${resultsArray[i]}</li>`
+      resultList.innerHTML += `<li class="list-group-item search-result" style="width: 350px; margin: auto;">${resultsArray[i]}</li>`
     }
   }
   $('#search-results').show()
