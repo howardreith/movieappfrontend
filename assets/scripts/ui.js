@@ -1,5 +1,4 @@
 const showGetMovieMatchesSuccess = function (response) {
-  console.log('Response is ', response)
   $('#movie-list').attr('class', 'list-group text-center d-block')
   $('#movie-list-1').text(response.movielist[1])
   $('#movie-list-2').text(response.movielist[2])
@@ -18,11 +17,11 @@ const showGetMovieMatchesSuccess = function (response) {
   $('#movie-list-15').text(response.movielist[15])
 }
 
-const showGetMovieMatchesFail = function (error) {
-  console.log('Error is ', error)
-}
+// const showGetMovieMatchesFail = function (error) {
+//   // console.log('Error is ', error)
+// }
 
 module.exports = {
-  showGetMovieMatchesSuccess,
-  showGetMovieMatchesFail
+  showGetMovieMatchesSuccess
+  // showGetMovieMatchesFail
 }

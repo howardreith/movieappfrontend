@@ -3,7 +3,6 @@
 const config = require('./config')
 
 const getMovieMatches = function (selectedMovie) {
-  console.log(selectedMovie)
   return $.ajax({
     method: 'POST',
     dataType: 'json',
