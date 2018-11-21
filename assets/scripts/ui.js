@@ -1,6 +1,6 @@
 const showGetMovieMatchesSuccess = function (response) {
   console.log('Response is ', response)
-  $('#movie-list-div').show()
+  $('#movie-list').attr('class', 'list-group text-center d-block')
   $('#movie-list-1').text(response.movielist[1])
   $('#movie-list-2').text(response.movielist[2])
   $('#movie-list-3').text(response.movielist[3])
