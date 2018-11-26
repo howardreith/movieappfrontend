@@ -1,11 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: black;
-}
-
-#theater-image {
-  position: center;
+  background-image: url('public/Theaterbackground.png');
+  background-size: 100%;
 }
 
 #content {
@@ -36,13 +33,6 @@ h1 {
   text-align: center;
   width: 100px;
 }
-//
-// #result-list {
-//   max-height: 40vh;
-//   overflow: scroll;
-//   overflow-x: hidden;
-//   width: 250px;
-// }
 
 .movie-list {
   width: 300px;

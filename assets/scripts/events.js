@@ -8,6 +8,7 @@ const onMovieInput = function (event) {
 }
 
 $('#movie-input').keyup(function () {
+  $('#movie-list').attr('class', 'list-group text-center d-none')
   const search = $(this).val()
   const resultsText = $('#results_text')
   const resultsCount = $('#results_count')
